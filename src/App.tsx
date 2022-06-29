@@ -1,9 +1,8 @@
 import React from 'react';
-// import logo from './assets/logo.svg';
 import './style/App.scss';
 
 import Navbar from './components/Navbar/Navbar';
-import Home from './components/Home';
+import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
@@ -14,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Home />
+      <Hero />
       <About />
       <Experience />
       <Projects />
