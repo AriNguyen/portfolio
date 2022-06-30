@@ -1,13 +1,13 @@
 import React from 'react';
 import './style/App.scss';
 
-import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Blogs from './components/Blogs';
-import Contact from './components/Contact';
+import Navbar from './sections/navbar/navbar';
+import Hero from './sections/hero/hero';
+import About from './sections/about/about';
+import Experience from './sections/experience/experience';
+import Projects from './sections/projects/projects';
+import Blogs from './sections/blogs/blogs';
+import Contact from './sections/contact/contact';
 
 function App() {
   return (
