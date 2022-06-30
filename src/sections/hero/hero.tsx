@@ -2,9 +2,8 @@ import React from 'react';
 import { Row, Col } from "react-flexbox-grid";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
-import { Button } from '@mui/material';
-
-import Ava from '../../assets/hero/ava.png';
+import Ava from '../../assets/hero/ava.jpg';
+import Button from '../../components/button/button';
 
 import "./hero.scss";
 
@@ -26,8 +25,8 @@ export default function Hero() {
               Interested in the field of AI/ML and Robotics.
             </p>
             <Row className="hero-row">
-              <Button variant="contained" href="contact">SEND MESSAGE</Button>
-              <Button variant="contained">DOWNLOAD CV</Button>
+              <Button target='' label="SEND MESSAGE"></Button>
+              <Button target='' label="DOWNLOAD CV"></Button>
             </Row>
             <Row className="hero-row">
               <div id="social-test">
