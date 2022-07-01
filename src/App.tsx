@@ -8,8 +8,9 @@ import Experience from './sections/experience/experience';
 import Projects from './sections/projects/projects';
 import Blogs from './sections/blogs/blogs';
 import Contact from './sections/contact/contact';
+import Footer from './sections/footer/footer';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Navbar />
@@ -19,8 +20,7 @@ function App() {
       <Projects />
       <Blogs />
       <Contact />
+      <Footer />
     </div>
   );
 }
-
-export default App;
