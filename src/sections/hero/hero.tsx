@@ -1,13 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Row, Col } from "react-flexbox-grid";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { useSpring, animated, config } from 'react-spring'
 
-import Ava from '../../assets/hero/ava.jpg';
+import Ava from '../../assets/hero/ava_white.png';
 import Button from '../../components/button/button';
 
 import "./hero.scss";
+import {COLORS} from "../../style/colors";
 
 export default function Hero() {
+  const [flip, set] = useState(false)
+  const styles = useSpring({
+    loop: true,
+    to: [
+      { opacity: 1, color: COLORS.mainColor },
+      { opacity: 1, color: COLORS.blackColor },
+    ],
+    from: { opacity: 0, color: COLORS.blackColor },
+    // reset: true,
+    // reverse: flip,
+    delay: 500,
+    // config: config.molasses,
+    // onRest: () => set(!flip),
+  })
+
   return (
     <div className="hero" id="hero">
       <div className="wrapper">
@@ -15,7 +32,7 @@ export default function Hero() {
           <Col md={12} lg={6}>
             <div className="hero-info">
               <h1 className="weight800 font60">
-                Hi! I'm Ari.
+                Hi! I'm {<animated.text className="weight800 font60" style={styles}>Ari.</animated.text>}
               </h1>
               <h1 className="weight800 font40">
                 Computer Science Student
